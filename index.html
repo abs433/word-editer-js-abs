@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word</title>
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <style>
+        #inp{
+            /* width: 100%; */
+            height: 500%;
+            width: 700;
+            /* margin: 0px 20px 20px 20px; */
+            align-content: center;
+            align-self: center;
+            /* padding: 10px; */
+        }
+        #para{
+            padding: 5px 10px ;
+            /* font-size: 20px; */
+            width: 800;
+
+            
+        }
+        .aa{
+            text-align: right;
+        }
+        .btnicon{
+            border: none; 
+            /* background-color: black; */
+            color: white;   
+        }
+        .drop{
+            margin-left: 10px;
+            border: 2px solid;
+            border-radius: 5px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 10px 70px; margin: 0px 0px 10px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Word Edit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <!-- <button class="btnicon"  onclick="upercase()"><i class="fi fi-rs-letter-case" style="font-size: 30px;"></i></button> -->
+                        <button class="btnicon" onclick="upercase()"><img onclick="upercase()" src="./img/upper-case.png" width="30px" alt=""></i></button>
+                        <!-- <a class="nav-link active" aria-current="page" href="#" onclick="upercase()"><i class="fi fi-rs-letter-case" style="font-size: 30px;"></i></a> -->
+                    </li>
+                    <li class="nav-item">
+                        <button class="btnicon" onclick="lowercase()"><img src="./img/lower-case.png" width="30px" alt=""></i></button>
+                    </li>
+                     <li class="nav-item">
+                        <button class="btnicon" onclick=" bold()"><img src="./img/bold.png" width="30px" alt=""></i></button>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <button class="btnicon" onclick=" italic()"><img src="./img/png-transparent-italic-feather-icon.png" width="30px" alt=""></i></button>
+                    </li> -->
+                    <li class="nav-item">
+                        <button class="btnicon" onclick=" italic()"><img src="./img/2225506-200.png" width="30px"
+                                alt=""></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btnicon" onclick=" left()"><img src="./img/align-left-icon.jpg" width="30px" alt=""></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btnicon" onclick=" center()"><img src="./img/align center.png" width="30px" alt=""></i></button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btnicon" onclick=" right()"><img src="./img/align-right.png" width="30px" alt=""></i></button>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <button class="btnicon" onclick=" fontFamily()">Font faimly</button>
+                    </li> -->
+                     <select class="drop" name="font-family" id="fonts" onclick=" fontFamily()">
+                    
+                            <option value="Arial">arial</option>
+                            <option value="Calibri">Calibri</option>
+                            <option value="monospace">monspace</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times">Times</option>
+                            <option value="Impect">Impect</option>
+                            <option value="cursive">cursive</option>
+                            <option value="fantasy">fantasy</option>
+                            <option value="Franklin">Franklin</option>
+                        </select>
+
+                        <select class="drop" name="background-color" id="ground" onclick="highLighter()">
+                                <option value="green">green</option>
+                                <option value="white">white</option>
+                                <option value="coral">coral</option>
+                                <option value=" red">red</option>
+                                <option value="green">green</option>
+                                <option value=" lightblue">lightblue</option>
+                                <option value="yellow">yellow</option>
+                                <option value="gold">gold</option>
+                                <option value="gray">gray</option>
+                                <option value="orange">orange</option>
+                                <option value="aqua">aqua</option>
+                                <option value="bisque">bisque</option>
+                            </select>
+                        <input class="drop" type="color" id="colors" onclick="chooseColor()">
+
+
+                             <select class="drop" name="font-size" id="size" onclick=" fontSize()">
+                                    <option value="10px">1</option>
+                                    <option value=" 12px">2</option>
+                                    <option value="14px">3</option>
+                                    <option value="16px">4</option>
+                                    <option value="18px">5</option>
+                                    <option value="20px">6</option>
+                                    <option value="22px">7</option>
+                                    <option value="24px">8</option>
+                                    <option value="26px">9</option>
+                                    <option value="28px">10</option>
+                                </select>
+                    <!-- <li class="nav-item">
+                        <button style="color: white; background-color: black; font-size: 10px;" class="btnicon" onclick=" italic()"><i class="fa-solid fa-italic"></i></button>
+                    </li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li> -->
+                   
+                </ul>
+                <form class="d-flex">
+                    <!-- <input class="form-control me-2" id="" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" onclick="" type="submit">Search</button> -->
+                <!-- <input type="text" name="" id="text-search">
+                <button onclick="search()"> find</button> -->
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div style=" text-align: center;">
+    <input type="text" name="" id="text-search">
+    <button onclick="search()"> find</button>
+    </div>
+<div style=" text-align: center;">
+<p id="para">abu bakar <br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum officia id reprehenderit nemo velit aliquam, et minima qui quibusdam ex. Placeat facilis accusantium nostrum provident architecto eum earum iure voluptatum? </p>
+<!-- <textarea name="" id="para" cols="150" rows="10" type="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non dolore vitae minus tenetur ab error praesentium consequuntur assumenda at. Non, deleniti delectus? Quae, exercitationem expedita aliquam consequuntur labore incidunt explicabo.</textarea> -->
+</div>
+<!-- <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, earum corporis! Sed enim illo, reiciendis, odit dolorem nemo fuga accusantium et consequuntur eaque voluptate voluptatem ipsum odio? Voluptates, officia beatae?</p> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <script>
+      
+        var flag = true
+var inp = document.getElementById('para')
+var text = (inp.innerText);
+// console.log(text.toLocaleUpperCase());
+function upercase() {
+    inp.innerText=(text.toUpperCase());
+    
+}
+    function lowercase() {
+        inp.innerText = (text.toLocaleLowerCase());
+
+    }
+    var flag = true ;
+
+    function bold() {
+        if (flag === true) {
+            inp.style.fontWeight = "bold";
+            flag = false
+        } else {
+            inp.style.fontWeight = "normal";
+            flag = true
+        }
+    }
+
+
+    function italic() {
+        if (flag === true) {
+            inp.style.fontStyle = "italic";
+            flag = false
+        } else {
+            inp.style.fontStyle = "normal";
+            flag = true
+        }
+    }
+
+    function center() {
+        inp.style.textAlign = "center ";
+    }
+    function left() {
+        inp.style.textAlign = "left";
+    }
+    function right() {
+        inp.style.textAlign = "right";
+    }
+
+     function fontFamily() {
+            var fonts = document.getElementById("fonts")
+
+            inp.style.fontFamily = fonts.value
+        }
+        function chooseColor() {
+            var color = document.getElementById("colors")
+            inp.style.color = color.value
+        }
+
+        function lineThrough() {
+
+            inp.style.textDecoration = "line-through"
+        }
+        function highLighter() {
+            var ground = document.getElementById("ground")
+            inp.style.backgroundColor = ground.value
+        }
+        function border() {
+            inp.style.border = " 5px solid red"
+            inp.style.borderRadius = "10px"
+        }
+        function fontSize() {
+            inp.style.fontSize = size.value
+
+        }
+
+        function chooseColor() {
+                var color = document.getElementById("colors")
+                inp.style.color = color.value
+            }
+
+
+
+    function search() {
+        let search = document.getElementById('text-search').value;
+        let para = document.getElementById('para')
+        search = search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        console.log(search);
+        let pattern = new RegExp(`${search}`, "gi");
+        para.innerHTML = para.textContent.        
+        replace(pattern, match => `<mark>${match}</mark>`)
+
+    }
+      
+
+        //     function higlight(){
+        //         var para = document.getElementById('para')
+        // let search = document.getElementById('text-search').value;
+
+        //         // console.log(para);
+        //         var change = para.innerText.toLowerCase()
+        //         // console.log(change);
+        //         var inpt1 = document.getElementById('inp').value.toLowerCase()
+        //         // console.log(inpt1);
+        //          para.innerHTML= (change.replaceAll(inpt1 , `<mark> ${inpt1}</mark>` ))
+        //           console.log();
+        //     }
+    </script>
+</body>
+
+</html>
